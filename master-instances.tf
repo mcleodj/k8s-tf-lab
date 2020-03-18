@@ -4,6 +4,7 @@ resource "vsphere_virtual_machine" "master2" {
   resource_pool_id = "${data.vsphere_resource_pool.pool.id}"
   datastore_id     = "${data.vsphere_datastore.datastore.id}"
   folder = "Kubernetes"
+  enable_disk_uuid = "true"
 
   num_cpus = 2
   memory   = 2048
